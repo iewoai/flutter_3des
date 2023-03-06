@@ -7,6 +7,7 @@ import javax.crypto.Cipher;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESedeKeySpec;
 import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 
 public class Flutter3desPluginJava {
 
@@ -24,16 +25,17 @@ public class Flutter3desPluginJava {
     /**
      * Decrypt
      */
-    public static String decryptFromHex(String encryptHexStr, String secretKey, String iv) {
+    public static byte[] decryptFromHex(String encryptHexStr, String secretKey, String iv) {
         if(encryptHexStr == null || iv == null)
             return null;
         try {
             return decrypt(hex2byte(encryptHexStr.getBytes()), secretKey, iv);
         } catch (Exception e){
             e.printStackTrace();
-            return "";
+            return null;
         }
     }
+
 
 
     /**
@@ -74,24 +76,25 @@ public class Flutter3desPluginJava {
      * @param iv  vector (usually 8 bits)
      * @return return String
      */
-    public static String decrypt(byte[] data, String key, String iv) {
+    public static byte[] decrypt(byte[] data, String key, String iv) {
         if(data == null || iv == null)
             return null;
         try {
 
-            byte[] keyByteArray = hexStringToByteArray(key);
-            byte[] ivByteArray = hexStringToByteArray(iv);
-
-            DESedeKeySpec dks = new DESedeKeySpec(keyByteArray);
-            SecretKeyFactory keyFactory = SecretKeyFactory.getInstance(KEY_INSTANCE);
-            Key secretKey = keyFactory.generateSecret(dks);
+            byte[] keyByteArray = key.getBytes();
+            byte[] ivByteArray = iv.getBytes();
+//            Security.addProvider(new BouncyCastleProvider());
+//            DESedeKeySpec dks = new DESedeKeySpec(keyByteArray);
+//            SecretKeyFactory keyFactory = SecretKeyFactory.getInstance(KEY_INSTANCE);
+            SecretKeySpec secretKeySpec = new SecretKeySpec(keyByteArray, KEY_INSTANCE);
+            IvParameterSpec paramSpec = new IvParameterSpec(ivByteArray);
             Cipher cipher = Cipher.getInstance(ALGORITHM_3DES);
-            AlgorithmParameterSpec paramSpec = new IvParameterSpec(ivByteArray);
-            cipher.init(Cipher.DECRYPT_MODE, secretKey, paramSpec);
-            return new String(cipher.doFinal(data));
+//            Key secretKey = keyFactory.generateSecret(dks);
+            cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, paramSpec);
+            return cipher.doFinal(data);
         } catch (Exception e){
             e.printStackTrace();
-            return "";
+            return null;
         }
     }
 
