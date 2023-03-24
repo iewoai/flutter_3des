@@ -2,23 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="413a4cc9-a267-44cc-87e0-4cce3aeb02c9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/test/widget_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/ositano/flutter_3des/Flutter3desPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/ositano/flutter_3des/Flutter3desPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/ositano/flutter_3des/Flutter3desPluginJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/ositano/flutter_3des/Flutter3desPluginJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_3des.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_3des.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Samsung_A70_API_29]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -30,6 +31,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1nNZtFIaV7MR6FbHYpYzKA2uVkk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -37,14 +41,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ScalaStudy/spark-etl" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.424626" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
-  <component name="RunManager" selected="Flutter.example/lib/main.dart">
+  <component name="RunManager">
     <configuration name="flutter3des" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
       <option name="testName" value="flutter3des" />
       <option name="testFile" value="$PROJECT_DIR$/test/flutter_3des_test.dart" />
@@ -59,13 +70,6 @@
       <option name="testFile" value="$PROJECT_DIR$/test/flutter_3des_test.dart" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Flutter Test.tests in flutter_3des_test.dart" />
-        <item itemvalue="Flutter Test.flutter3des" />
-        <item itemvalue="Flutter Test.flutter3des_new" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -77,25 +81,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588747485647</updated>
+      <workItem from="1679650875787" duration="1939000" />
+      <workItem from="1679659434153" duration="600000" />
+      <workItem from="1679661111455" duration="1304000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="911" height="191" key="GridCell.Tab.0.bottom" timestamp="1623755440673">
-      <screen x="0" y="23" width="1440" height="826" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1679661124365">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="911" height="191" key="GridCell.Tab.0.bottom/0.23.1440.826@0.23.1440.826" timestamp="1623755440673" />
-    <state width="911" height="191" key="GridCell.Tab.0.center" timestamp="1623755440669">
-      <screen x="0" y="23" width="1440" height="826" />
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1679661124365" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1679651391051">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="911" height="191" key="GridCell.Tab.0.center/0.23.1440.826@0.23.1440.826" timestamp="1623755440669" />
-    <state width="911" height="191" key="GridCell.Tab.0.left" timestamp="1623755440669">
-      <screen x="0" y="23" width="1440" height="826" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1679651391051" />
+    <state x="468" y="149" width="600" height="536" key="find.popup" timestamp="1679651364476">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="911" height="191" key="GridCell.Tab.0.left/0.23.1440.826@0.23.1440.826" timestamp="1623755440669" />
-    <state width="911" height="191" key="GridCell.Tab.0.right" timestamp="1623755440671">
-      <screen x="0" y="23" width="1440" height="826" />
+    <state x="468" y="149" width="600" height="536" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1679651364476" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1679651056896">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="911" height="191" key="GridCell.Tab.0.right/0.23.1440.826@0.23.1440.826" timestamp="1623755440671" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1679651056896" />
   </component>
 </project>

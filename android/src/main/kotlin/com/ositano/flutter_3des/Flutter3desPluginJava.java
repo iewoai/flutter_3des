@@ -8,6 +8,7 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESedeKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
+import java.util.Base64;
 
 public class Flutter3desPluginJava {
 
@@ -92,6 +93,24 @@ public class Flutter3desPluginJava {
 //            Key secretKey = keyFactory.generateSecret(dks);
             cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, paramSpec);
             return cipher.doFinal(data);
+        } catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static byte[] decrypt2(byte[] data, String key, String iv) {
+        if(data == null || iv == null)
+            return null;
+        try {
+
+            byte[] keyByteArray = key.getBytes();
+            byte[] ivByteArray = iv.getBytes();
+            SecretKeySpec secretKeySpec = new SecretKeySpec(keyByteArray, KEY_INSTANCE);
+            IvParameterSpec paramSpec = new IvParameterSpec(ivByteArray);
+            Cipher cipher = Cipher.getInstance(ALGORITHM_3DES);
+            cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, paramSpec);
+            return cipher.doFinal(Base64.getDecoder().decode(data));
         } catch (Exception e){
             e.printStackTrace();
             return null;

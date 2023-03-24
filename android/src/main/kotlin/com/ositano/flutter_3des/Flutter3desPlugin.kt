@@ -46,6 +46,7 @@ public class Flutter3desPlugin: FlutterPlugin, MethodCallHandler {
         result.success(Flutter3desPluginJava.encryptToHex(arguments[0] as String, key, iv))
       }
       "decrypt" -> result.success(Flutter3desPluginJava.decrypt(arguments[0] as ByteArray, key, iv))
+      "decrypt2" -> result.success(Flutter3desPluginJava.decrypt2(arguments[0] as String, key, iv))
       "decryptFromHex" -> {
         result.success(Flutter3desPluginJava.decryptFromHex(arguments[0] as String, key, iv))
       }
