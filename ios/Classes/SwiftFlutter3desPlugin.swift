@@ -1,6 +1,7 @@
 import Flutter
 import UIKit
 import CommonCrypto
+import Foundation
 
 public class SwiftFlutter3desPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
@@ -25,6 +26,12 @@ public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         case "decrypt":
             if let data = arguments[0] as? FlutterStandardTypedData {
                 decrypt(data: data.data, key: key, iv: iv, result: result)
+            } else {
+                result(nil)
+            }
+        case "decrypt1":
+            if let data = arguments[0] as? FlutterStandardTypedData {
+                decrypt1(data: data.data, key: key, iv: iv, result: result)
             } else {
                 result(nil)
             }
@@ -56,11 +63,23 @@ public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
        result(decrypt(data: data, key: key, iv: iv))
     }
 
-    func decrypt(data: Data, key: String, iv: String) -> String? {
+    func decrypt(data: Data, key: String, iv: String) -> Data? {
         guard let data = data.crypt(operation: CCOperation(kCCDecrypt), key: key, iv: iv) else {
             return nil
         }
-        return String(data: data, encoding: .utf8)
+        return data
+    }
+
+    func decrypt1(data: Data, key: String, iv: String, result: FlutterResult) {
+       result(decrypt1(data: data, key: key, iv: iv))
+    }
+
+    func decrypt1(data: Data, key: String, iv: String) -> Data? {
+        let data64 = Data(base64Encoded: Data)!
+        guard let data = data64.crypt(operation: CCOperation(kCCDecrypt), key: key, iv: iv) else {
+            return nil
+        }
+        return data
     }
 }
 
@@ -72,8 +91,8 @@ private extension Data {
         let algorithm = kCCAlgorithm3DES
         let options = kCCOptionPKCS7Padding
 
-        let keyData = key.hexStringToByteArray //converting string key to byte array [UInt8]
-        let ivData = iv.hexStringToByteArray //converting string iv to byte array [UInt8]
+        let keyData = [UInt8](key.data(using: .utf8)!)
+        let ivData = [UInt8](iv.data(using: .utf8)!)
 
         let keyLength = kCCKeySize3DES
         let dataIn = [UInt8](self)
